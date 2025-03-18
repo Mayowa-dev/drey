@@ -200,19 +200,20 @@ h1 {
   }
 
   #carousel {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 40px;
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
     position: relative;
     border-radius: 30px;
     background: rgb(2,0,36);
     background: linear-gradient(-45deg, rgb(170, 170, 165) 0%, rgb(170, 170, 165) 35%, rgb(170, 170, 165) 100%);
-    background-size: 400% 300%;
+    background-size: 200% 200%;
     animation: gradientAnimation 15s ease infinite;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);
   }
 
   #carousel .carousel-item img {
+    width: 300px;
     height: 500px;          
     object-fit: cover;       
     border-radius: 20px;     
@@ -235,7 +236,6 @@ footer {
     overflow: hidden;
   }
   
-  /* Decorative Animated Background (optional) */
   footer::before {
     content: "";
     position: absolute;
@@ -372,6 +372,7 @@ footer {
 
     #carousel .carousel-item img {
         height: 400px;
+        object-fit: contain cover;
     }
 }
 
@@ -419,7 +420,6 @@ footer {
 
     #carousel .carousel-item img {
         height: 300px;
+        object-fit: cover;
     }
 }
-  
- 
