@@ -75,7 +75,7 @@ nav ul li a:hover {
 
 .light-theme {
     background-color: #fff;
-    padding: 50px 20px;
+    padding: 20px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -183,8 +183,9 @@ h1 {
 }
 
 .hero-image1 img {
-    width: 100%;
-    max-width: 1500px;
+    width: 60%;
+    margin-top: 10;
+    max-width: 500px;
 }
 
    @keyframes gradientAnimation {
@@ -209,7 +210,8 @@ h1 {
     background: linear-gradient(-45deg, rgb(170, 170, 165) 0%, rgb(170, 170, 165) 35%, rgb(170, 170, 165) 100%);
     background-size: 200% 200%;
     animation: gradientAnimation 15s ease infinite;
-    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);;
+    background-image: url('images/yellow\ element.jpg');
   }
 
   #carousel .carousel-item img {
@@ -219,6 +221,11 @@ h1 {
     border-radius: 20px;     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
+  .carousel-item {
+  transition: transform 1s ease-in-out;
+}
+
 
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
