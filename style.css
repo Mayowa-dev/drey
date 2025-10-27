@@ -200,37 +200,131 @@ h1 {
     }
   }
 
-  #carousel {
-    max-width: 1000px;
-    margin: 20px auto;
-    padding: 20px;
-    position: relative;
-    border-radius: 30px;
-    background: rgb(2,0,36);
-    background: linear-gradient(-45deg, rgb(170, 170, 165) 0%, rgb(170, 170, 165) 35%, rgb(170, 170, 165) 100%);
-    background-size: 200% 200%;
-    animation: gradientAnimation 15s ease infinite;
-    box-shadow: 0 8px 6px rgba(0, 0, 0, 0.2);;
-    background-image: url('images/yellow\ element.jpg');
-  }
+  .projects-section {
+  margin-top: 60px;
+}
 
-  #carousel .carousel-item img {
-    width: 300px;
-    height: 500px;          
-    object-fit: cover;       
-    border-radius: 20px;     
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
+.projects-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 
-  .carousel-item {
-  transition: transform 1s ease-in-out;
+.project-filters .filter {
+  margin-left: 15px;
+  font-size: 14px;
+  text-decoration: none;
+  color: #666;
+  transition: 0.3s;
+}
+
+.project-filters .filter:hover,
+.project-filters .filter.active {
+  color: #51f783;
+  font-weight: 600;
+}
+
+.project-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.project-name {
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 500;
+  color: #333;
+}
+.project-item {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Hide animation */
+.project-item.hide {
+  opacity: 0;
+  transform: scale(0.7);
+  pointer-events: none;
+}
+
+/* Stagger animation on show */
+.project-item.show {
+  animation: staggerZoom 0.45s ease forwards;
+}
+
+@keyframes staggerZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Active filter tab styling */
+.project-filters .filter.active {
+  color: #168b06;
+  font-weight: 700;
+  border-bottom: 2px solid #3bf569;
+  padding-bottom: 3px;
+}
+/* Project item base */
+.project-item {
+  /* ensure items participate in layout when visible */
+  display: block;               /* IMPORTANT for grid/columns */
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  will-change: opacity, transform;
+}
+
+/* class applied to start hide animation */
+.project-item.hiding {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* class applied after animation finishes to remove from layout */
+.project-item.hidden {
+  display: none !important;
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none;
+}
+
+/* class applied to show with entrance animation */
+.project-item.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* optional stagger control (reset) */
+.project-item {
+  transition-delay: 0s;
 }
 
 
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    filter: invert(100%);
-  }
+.reviews-carousel .review-item {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.reviews-carousel .review-item h4 {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
 
 footer {
     position: relative;
